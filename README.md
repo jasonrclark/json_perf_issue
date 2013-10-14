@@ -38,7 +38,10 @@ Darwin Soupy.local 12.5.0 Darwin Kernel Version 12.5.0: Mon Jul 29 16:33:49 PDT 
  20.681411   0.014974  20.696385 ( 20.698339)
  22.670436   0.026683  22.697119 ( 22.699284)
  26.244242   0.880500  27.124742 ( 27.132028)
+
 ```
+
+Additionally the file rbx_json_generate_profile.txt contains a backtrace taken during the JSON generation via OS X's sample process.
 
 # My Setup
 
