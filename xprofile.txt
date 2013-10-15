@@ -1,0 +1,57 @@
+✔ ♥♥♥♥~/source/newrelic/support/json_perf_issue [rbx-2.0.0] (master)*:ruby -Xprofile go.rb
+      user     system      total        real
+2246.669389  13.799838 2260.469227 (2261.282569)
+Thread 1: total running time: 2261.2385798230002s
+
+  %   cumulative   self                self     total
+ time   seconds   seconds      calls  ms/call  ms/call  name
+------------------------------------------------------------
+  97.87 2260.39   2213.18        100 22131.77 22603.93  JSON::Ext::Generator::State#generate
+   0.62   28.93     14.09    1865600     0.01     0.02  String#encode!
+   0.25    8.32      5.63    1865690     0.00     0.00  String#force_encoding
+   0.25   44.56      5.60    1865600     0.00     0.02  String#encode
+   0.18   10.06      4.11    1866682     0.00     0.01  String#dup
+   0.12    5.62      2.75    1866856     0.00     0.00  Rubinius::Type.object_initialize_dup
+   0.11    3.07      2.58    3732719     0.00     0.00  Module#===
+   0.11    2.87      2.48    1866856     0.00     0.00  Kernel#initialize_dup
+   0.10    2.45      2.18    3731371     0.00     0.00  Kernel#===
+   0.06    2.41      1.31    1865690     0.00     0.00  Rubinius::Type.coerce_to_encoding
+   0.05    1.22      1.19    1869085     0.00     0.00  Kernel#kind_of?
+   0.05    1.11      1.11        382     2.90     2.90  GC.collect_young
+   0.03 2261.07      0.66        100     6.61 22610.74  JSON.generate
+   0.03    0.91      0.58      87663     0.01     0.01  Hash#find_item
+   0.02    0.60      0.56    1865600     0.00     0.00  String#ascii_only?
+   0.02    0.49      0.42    3733534     0.00     0.00  Rubinius::Type.object_kind_of?
+   0.02    0.39      0.35    1866682     0.00     0.00  String#initialize_copy
+   0.02    0.49      0.34    7464529     0.00     0.00  Kernel#equal?
+   0.01    0.35      0.23    5596813     0.00     0.00  Encoding#ascii_compatible?
+   0.01    0.66      0.22      43000     0.01     0.02  Hash#keys
+   0.01    0.25      0.21    1957230     0.00     0.00  Fixnum#==
+   0.01    0.22      0.20      84816     0.00     0.00  String#to_s
+   0.01    0.44      0.19      43008     0.00     0.01  Hash#each_item
+   0.01    0.19      0.17      86438     0.00     0.00  Hash::State#match?
+   0.01    0.20      0.16    1865712     0.00     0.00  String#encoding
+   0.01    1.05      0.14      87294     0.00     0.01  Hash#[]
+   0.00    0.25      0.11      84600     0.00     0.00  Hash::keys<715> {}
+   0.00    0.14      0.10      87838     0.00     0.00  Array#<<
+   0.00    0.10      0.09      87880     0.00     0.00  Hash#key_index
+   0.00    0.04      0.03      87838     0.00     0.00  Array#set_index
+   0.00    0.05      0.03          1    28.33    48.40  JSON::Ext::Parser#parse
+   0.00    0.03      0.03      88942     0.00     0.00  Kernel#hash
+   0.00    0.03      0.03         29     0.96     0.96  GC.collect_mature
+   0.00    0.05      0.03       1992     0.01     0.02  Array#each
+   0.00    0.02      0.02      84836     0.00     0.00  Kernel#instance_of?
+   0.00    0.02      0.02      97237     0.00     0.00  Rubinius::Tuple#[]
+   0.00    0.01      0.01         26     0.43     0.43  Rubinius::CodeLoader#resolve_require_path
+   0.00    0.02      0.01        719     0.02     0.02  Rubinius.synchronize
+   0.00    0.02      0.01        100     0.11     0.18  JSON::Ext::Generator::State#configure
+   0.00    0.02      0.01         26     0.39     0.78  Rubinius::CodeLoader#require
+   0.00    0.01      0.01         26     0.35     0.47  Rubinius::CodeLoader::require<102> {}
+   0.00    0.01      0.01      89255     0.00     0.00  Fixnum#&
+   0.00    0.01      0.01      90688     0.00     0.00  Rubinius::Type.object_equal
+   0.00    0.08      0.01         26     0.23     2.96  Rubinius::CodeLoader.require
+   0.00    0.01      0.01         47     0.12     0.26  Rubinius::ToolSet::Runtime::AST::SendWithArguments#bytecode
+
+133 methods omitted
+
+178 methods called a total of 48,009,682 times
